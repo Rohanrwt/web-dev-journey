@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="helloBtn">Say Hello</button>
+  <p id="greet">I love coding!</p>
+  <button id="changeBtn">Change Text</button>
+
+  <script>
+    document.getElementById('helloBtn').onclick = function() {
+      alert('Hello Rohan');
+    }
+
+    document.getElementById('changeBtn').onclick = function() {
+      document.getElementById('greet').textContent = "Now I love Javascript!"
+    }
+  </script>
+</body>
+</html>
