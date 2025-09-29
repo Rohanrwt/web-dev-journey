@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teddy Events</title>
+</head>
+<body>
+  <h1 id="teddy">hello, I am a Teddy</h1>
+
+  <script>
+
+    let teddy = document.getElementById('teddy');
+
+    teddy.addEventListener('click', function() {
+      teddy.innerText = 'You clicked me';
+      teddy.style.color = 'Green'
+    })
+  </script>
+</body>
+</html>

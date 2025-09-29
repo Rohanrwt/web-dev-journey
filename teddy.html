@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teddy Adventure</title>
+</head>
+<body>
+  <h1 id="teddy">&#129528; I am Teddy</h1>
+  <p id="score">Score: 0</p>
+
+  <button onclick="makeHappy()">Make Happy</button>
+  <button onclick="hideTeddy()">Hide Teddy</button>
+  <button onclick="showTeddy()">Show Teddy</button>
+  <button onclick="changeColor()">Change Color</button>
+  <button onclick="danceTeddy()">Dance Teddy</button>
+
+  <script>
+
+    let teddy = document.getElementById('teddy');
+    let scoreDisplay = document.getElementById('score')
+
+    let score = 0
+
+    function updateScore(points) {
+      score += points;
+      scoreDisplay.innerText = 'Score: ' + score;
+    }
+
+    function makeHappy() {
+      teddy.innerText = 'Teddy is Happy';
+      updateScore(1);
+    }
+
+    function hideTeddy() {
+      teddy.style.display = 'none';
+    }
+
+    function showTeddy() {
+      teddy.style.display = 'block'
+    }
+
+    function changeColor() {
+      teddy.style.color = 'red'
+    }
+
+    function danceTeddy() {
+      teddy.innerText = 'Teddy is Dancing';
+      teddy.style.color = 'green';
+      teddy.style.transform = 'rotate(-20deg)'
+    }
+
+  </script>
+</body>
+</html>

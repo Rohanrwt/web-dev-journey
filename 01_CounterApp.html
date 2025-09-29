@@ -21,8 +21,12 @@
     }
 
     document.getElementById('removeBtn').onclick = function() {
-      count--;
-      document.getElementById('number').innerText = count;
+      if (count > 0) {
+        count--;
+        document.getElementById('number').innerText = count;
+      } else {
+        alert("Can't go Lower");
+      }
     }
 
     document.getElementById('reset').onclick = function() {
@@ -30,6 +34,8 @@
       document.getElementById('number').innerText = count;
     }
 
+    
+    
   </script>
 </body>
 </html>
