@@ -1,10 +1,34 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const taskInput = document.getElementById('task-input');
-  const addTaskBtn = document.getElementById('add-task-btn');
-  const taskList = document.getElementById('task-list');
+const form = document.getElementById("task-form");
+const input = document.getElementById("task-input");
+const taskList = document.getElementById("task-list");
 
-  const addTask = (event) => {
-    const taskText = taskInput.ariaValueMax.trim();
-    
-  }
-})
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const taskText = input.value.trim();
+  if (taskText === "") return;
+
+  // create a new list item
+  const li = document.createElement("li");
+  li.textContent = taskText;
+
+  // ✅ Toggle line-through when clicking the task
+  li.addEventListener("click", () => {
+    li.classList.toggle("done");
+  });
+
+  // ❌ Add remove button
+  const removeBtn = document.createElement("button");
+  removeBtn.textContent = "❌";
+  removeBtn.style.marginLeft = "10px";
+
+  removeBtn.addEventListener("click", (e) => {
+    e.stopPropagation(); // prevent triggering the line-through when removing
+    taskList.removeChild(li);
+  });
+
+  li.appendChild(removeBtn);
+  taskList.appendChild(li);
+
+  input.value = "";
+});
