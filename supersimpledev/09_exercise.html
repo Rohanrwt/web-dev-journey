@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  
+  <!-- <button class="heads">heads</button>
+  <button class="tails">tails</button>
+  <p class="result"></p>
+
+  <script>
+    let button1 = document.querySelector('.heads');
+    let button2 = document.querySelector('.tails');
+    let result = document.querySelector('.result')
+
+    button1.addEventListener('click', () => {
+      result.innerHTML = `You choose: Heads`;
+    })
+
+    button2.addEventListener('click', () => {
+      result.innerHTML = `You choose: Tails`
+    }) -->
+
+    <input type="text" class="text" placeholder="Type your name...">
+    <button class="submit">Submit</button>
+    <p class="output"></p>
+
+    <script>
+      let inputEl = document.querySelector('.text');
+      let butEl = document.querySelector('.submit');
+      let result = document.querySelector('.output')
+
+      butEl.addEventListener('click', () => {
+        result.innerHTML = `${inputEl.value}`
+      })
+
+      inputEl.addEventListener('keydown', function(event) {
+        if (event.code === 'Enter')
+        result.innerHTML = `${inputEl.value}`
+      })
+    </script>
+
+
+    
+  </script>
+</body>
+</html>

@@ -6,33 +6,26 @@
   <title>Coin Flip</title>
 </head>
 <body>
+  <button onclick="playGame('heads')">Heads</button>
+  <button onclick="playGame('tails')">Tails</button>
+
   <script>
-    let number = Math.random();
+  let guess;
+  const score = {
+    wins: 0,
+    loses: 0
+  }
+
+  function playGame(guess) {
+    const number = Math.random();
+
+    const result = number <= 0.5 ? `heads` : `tails`;
+
+    console.log(guess === result ? 'You win': 'You Lose')
+    console.lo
+  }
 
 
-    let result = (number <= 0.5) ? console.log(`heads`) : console.log(`tails`);
-
-    let guess = 'heads';
-
-    let game = (guess === result) ? console.log('You Win') : console.log('You Lose');
-
-  
-    
-    // if (number <= 0.5) {
-    //   result = `heads`;
-    // } else {
-    //   result = `tails`;
-    // }
-
-    // console.log(result)
-
-    // let guess =  'heads'; 
-
-    // if (guess === result) {
-    //   console.log(`you win`)
-    // } else {
-    //   console.log(`You Lose`);
-    // }
   </script>
 </body>
 </html>

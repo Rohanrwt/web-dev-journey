@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Html, Css & JS</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "IBM Plex Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      font-variation-settings:
+    "wdth" 100;
+    }
+
+    .cart {
+      background-color: rgb(255, 216, 20);
+      padding: 10px 40px;
+      border-radius: 40px;
+      border: 0;
+      color: black;
+      font-size: 16px;
+      margin: 10px;
+    }
+
+    .request {
+      background-color: black;
+      color: white;
+      padding: 10px 40px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: 0;
+      margin-right: 20px;
+    }
+
+    .later {
+      background-color: rgb(230, 230, 230);
+      color: black;
+      padding: 10px 40px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: 0;
+    }
+
+    .toggle {
+      padding: 10px 40px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: 0;
+      margin-right: 10px;
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+
+  </style>
+</head>
+<body>
+  <button class="cart">Add to Cart</button>
+  <button class="request">Request Now</button>
+  <button class="later">Schedule for Later</button>
+  <button class="js-button">Test</button><br>
+  <button class="toggle">Gaming</button>
+  <button class="toggle">Music</button>
+  <button class="toggle">Tech</button>
+
+  <script>
+    const buttonEl = document.querySelectorAll('.toggle');  
+    let toggled = false;
+
+    buttonEl.forEach(buttonEl => {
+      buttonEl.addEventListener('click', () => {
+      if (!toggled) {
+        buttonEl.style.background = 'black';
+        buttonEl.style.color = 'white'
+      } else {
+        buttonEl.style.background = 'white';
+        buttonEl.style.color = 'black'
+      }
+      toggled = !toggled
+    })
+    })
+    
+    
+
+
+    
+  </script>
+</body>
+</html>
