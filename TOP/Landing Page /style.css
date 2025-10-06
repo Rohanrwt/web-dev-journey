@@ -1,0 +1,53 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f2937;
+  color: white;
+  padding-left: 20px;
+}
+
+h1 {
+  width: auto;
+}
+
+nav a {
+  padding: 1rem;
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  background: #1f2937;
+  color: white;
+  height: 50vh;
+  padding: 5rem 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+img {
+  width: 300px;
+  max-width: 500px;
+  border-radius: 20px;
+}
+
+button {
+  background: rgb(38, 106, 231);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 10px;
+}
