@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  background: rgb(255, 255, 255);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 40px;
+  padding: 30px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 60px;
+}
+
+button {
+  font-size: 25px;
+  padding: 10px;
+  margin-top: 20px;
+  background: darkred;
+  color: white;
+}
+
+button:hover {
+  background: rgb(66, 0, 0);
+  cursor: pointer
+}
+
+#save {
+  background: darkgreen;
+  margin-bottom: 20px;
+}
+
+#save:hover {
+  background: rgb(0, 80, 0);
+}
