@@ -4,19 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculator</title>
+  <link rel="stylesheet" href="/Projects/calculator/style.css">
 </head>
 <body>
-  <span id="num1-el"></span>
-  <span id="num2-el"></span>
-  <br>
-  <br>
-  <button onclick="add()">Add</button>
-  <button onclick="subtract()">Subtract</button>
-  <button onclick="divide()">Divide</button>
-  <button onclick="multiply()">Multiply</button>
-  <br>
-  <br>
-  <span id="sum-el">Calculation: </span>
+  <div id="calculator">
+      <input id="display" readonly>
+    <div id="keys">
+      <button onclick="addValue('+')" class="operator-btn">+</button>
+      <button onclick="addValue(1)">1</button>
+      <button onclick="addValue(2)">2</button>
+      <button onclick="addValue(3)">3</button>
+      <button onclick="addValue('-')" class="operator-btn">-</button>
+      <button onclick="addValue(4)">4</button>
+      <button onclick="addValue(5)">5</button>
+      <button onclick="addValue(6)">6</button>
+      <button onclick="addValue('*')" class="operator-btn">*</button>
+      <button onclick="addValue(7)">7</button>
+      <button onclick="addValue(8)">8</button>
+      <button onclick="addValue(9)">9</button>
+      <button onclick="addValue('/')" class="operator-btn">/</button>
+      <button onclick="addValue('.')">.</button>
+      <button onclick="addValue(0)">0</button>
+      <button onclick="calculate()">=</button>
+      <button onclick="clearDisplay()" class="operator-btn">C</button>
+    </div>
+  </div>
+
   <script src="/Projects/calculator/script.js"></script>
 </body>
 </html>

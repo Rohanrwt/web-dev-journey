@@ -1,25 +1,18 @@
-let num1 = 8;
-let num2 = 4;
-document.getElementById('num1-el').textContent = num1;
-document.getElementById('num2-el').textContent = num2;
-let result = document.getElementById('sum-el');
+const display = document.getElementById('display');
 
-function add() {
-  let total = num1 + num2;
-  result.textContent = `Sum: ` + total;
+function addValue(input){
+  display.value += input;
 }
 
-function subtract() {
-  let total = num1 - num2;
-  result.textContent = `Subtract: ` + total;
+function clearDisplay(){
+  display.value = "";
 }
 
-function divide() {
-  let total = num1 / num2
-  result.textContent = `divide: ` + total;
-}
-
-function multiply() {
-  let total = num1 * num2
-  result.textContent = `multiply: ` + total;
+function calculate(){
+  try {
+    // Safely evaluate the expression
+    display.value = eval(display.value);
+  } catch {
+    display.value = "Error";
+  }
 }
