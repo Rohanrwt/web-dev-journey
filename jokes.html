@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jokes</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Jokes Generator</title>
+      </head>
+      <body>
+        <h1>Random jokes Generator</h1>
+        <button id="btn">Tell me a Joke</button>
+        <p id="joke">Click the button to laugh!</p>
+
+        <script>
+          const jokeEl = document.getElementById("joke");
+          const btn = document.getElementById("btn");
+
+          const API_URL = "https://v2.jokeapi.dev/joke/Any";
+
+          async function getJoke() {
+            jokeEl.textContent = "Loading.."; //shows loading while waiting
+
+            const response = await fetch(API_URL); //ask kitchen for Data
+            const data = await response.json(); //open the plate (Convert JSON)
+
+            //Step 3: some jokes have setup & delivery, some have Joke
+            if (data.type === "single") {
+              jokeEl.textContent = data.joke;
+            } else data.type === "twopart";
+            jokeEl.textContent = `${data.setup} 😊 ${data.delivery}`;
+          }
+
+          //Step $: Add Event Listener
+          btn.addEventListener("click", getJoke);
+        </script>
+      </body>
+    </html>
+  </body>
+</html>
