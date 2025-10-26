@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+  background: greenyellow;
+  margin: 20px 20px;
+}
+
+button {
+  padding: 6px 16px;
+  background: green;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgb(10, 140, 10);
+}
